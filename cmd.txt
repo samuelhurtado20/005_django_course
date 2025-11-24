@@ -1,0 +1,52 @@
+************************************
+005
+************************************
+python -m venv venv 
+venv\Scripts\activate
+pip install django
+django-admin startproject coffee_shop   ** coffee_shop_proj
+code -r coffee_shop/
+ext black formatter, django, python, pylance
+create git ignore: gitignore.io
+
+create requirements.txt
+pip freeze
+pip freeze > requirements.txt
+
+create requirements-dev.txt
+pip install ipython
+pip install -r requirements.txt
+
+apps
+python manage.py startapp products
+create model products
+
+ctr p reload window
+
+pip install pillow
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py createsuperuser
+
+python manage.py startapp users
+
+
+
+**
+python manage.py runserver
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py startapp products
+python manage.py makemigrations
+python manage.py migrate
+python manage.py shell
+python manage.py startapp orders
+python manage.py startapp users
+python manage.py startapp reviews
+python manage.py startapp payments
+python manage.py startapp notifications
+python manage.py startapp analytics
+python manage.py startapp marketing
+**
