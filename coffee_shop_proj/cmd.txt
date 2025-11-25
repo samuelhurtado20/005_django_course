@@ -33,6 +33,12 @@ python manage.py createsuperuser
 python manage.py startapp users
 
 
+# pip install crispy_forms
+pip install crispy-tailwind
+
+
+
+python manage.py startapp orders
 
 **
 python manage.py runserver
@@ -50,3 +56,12 @@ python manage.py startapp notifications
 python manage.py startapp analytics
 python manage.py startapp marketing
 **
+
+
+********
+create app
+register under settings.py
+create model
+python manage.py makemigrations
+python manage.py migrate
+********
