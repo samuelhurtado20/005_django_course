@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>My Order</h1>
+
+            <p>{{ order.user.username }}</p>
+            <p>{{ order.id }}</p>
+            <p>{{ order.created_at|date:"d.M.Y" }}</p>
+            <hr />
+            {% for item in order.orderitem_set.all %}
+                <p>{{ item.product.name }} - {{ item.quantity }} x {{ item.product.price }} = {{ item.get_total_price }}</p>
+
+                <hr />
+                {% empty %}
+                <p>No items</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- {% debug order %} -->
+
+{% endblock %}
