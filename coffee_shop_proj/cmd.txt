@@ -49,6 +49,14 @@ coffee_shop_db
 manage.py shelldb
 pip install psycopg2-binary
 
+pip install django django-environ
+
+export DB_PASS=""
+
+breackpoint()
+
+response.context['products']
+
 **
 python manage.py runserver
 python manage.py migrate
