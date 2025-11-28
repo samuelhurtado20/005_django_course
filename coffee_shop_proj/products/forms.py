@@ -11,14 +11,16 @@ class ProductForm(forms.ModelForm):
     price = forms.DecimalField(
         widget=forms.NumberInput(attrs={"class": "form-control"})
     )
-    image = forms.ImageField(widget=forms.FileInput(attrs={"class": "form-control"}), required=False)
+    image = forms.ImageField(
+        widget=forms.FileInput(attrs={"class": "form-control"}), required=False
+    )
     available = forms.BooleanField(
         initial=True,
         required=False,
         label="Stock",
         widget=forms.CheckboxInput(attrs={"class": "form-check-input"}),
     )
-    
+
     def save(self, commit=True):
         Product.objects.create(**self.cleaned_data)
 

@@ -18,7 +18,7 @@ class OrderItem(models.Model):
     product = models.ForeignKey(Product, on_delete=models.PROTECT)
     quantity = models.PositiveIntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
-    
+
     def get_total_price(self):
         return self.product.price * self.quantity
 

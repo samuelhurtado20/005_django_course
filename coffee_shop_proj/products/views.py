@@ -28,6 +28,7 @@ class ProductListView(generic.ListView):
 class ProductListAPI(APIView):
     authentication_classes = []
     permission_classes = []
+
     def get(self, request):
         products = Product.objects.all()
         serializer = ProductSerializer(products, many=True)
